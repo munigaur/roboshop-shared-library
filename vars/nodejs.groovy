@@ -7,8 +7,8 @@ def lintChecks(COMPONENT) {
      }
 
 def sonarChecks(COMPONENT) {
-       sh "starting Code Quality Analysis"
-       sh 'sonar-scanner -Dsonar.projectKey=catalogue -Dsonar.sources=. -Dsonar.host.url=http://3.235.100.37:9000 -Dsonar.login=admin -Dsonar.password=password'
+       sh "echo starting Code Quality Analysis"
+       sh "sonar-scanner -Dsonar.projectKey=catalogue -Dsonar.sources=. -Dsonar.host.url=http://3.235.100.37:9000 -Dsonar.login=admin -Dsonar.password=password"
      }
 
 def call(COMPONENT){

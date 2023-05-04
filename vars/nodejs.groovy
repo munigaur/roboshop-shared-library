@@ -31,8 +31,9 @@ pipeline {
         stage('sonar Checks') {
           steps {
              script {
-                 sonarChecks(COMPONENT)
-                 }
+                 env.ARGS="-dsonar.sources=."
+                 common.sonarChecks(COMPONENT)
+                    }
              }
           }
          stage ('downloading the dependencies') {
